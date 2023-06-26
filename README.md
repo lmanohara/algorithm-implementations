@@ -12,4 +12,7 @@ This project includes the implementation of most common algorithms and data stra
   - Time complexity
     - Find `O(log(n))`
     - Union `O(log(n))`
+      
+## Acknowledgements
 
+ - [Coursera Algorithms, Part 1](https://www.coursera.org/learn/algorithms-part1)
