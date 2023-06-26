@@ -1,6 +1,5 @@
 package com.shperev.algorithm.impl;
 
-import com.shperev.algorithm.services.Stack;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
