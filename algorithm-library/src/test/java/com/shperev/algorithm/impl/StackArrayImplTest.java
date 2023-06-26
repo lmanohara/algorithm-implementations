@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StackArrayImplTest {
     @Test
     void givenItem_whenPushToStack_thenStackShouldNotEmpty() {
-        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>(10);
+        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>();
         stringStackArray.push("data1");
 
         boolean actual = stringStackArray.isEmpty();
@@ -18,7 +18,7 @@ class StackArrayImplTest {
 
     @Test
     void givenInitialStack_whenNoItems_thenStackShouldEmpty() {
-        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>(10);
+        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>();
         boolean actual = stringStackArray.isEmpty();
 
         assertTrue(actual);
@@ -26,7 +26,7 @@ class StackArrayImplTest {
 
     @Test
     void performPop_whenItemRemoveFromStack_thenShouldReturnItem() {
-        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>(10);
+        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>();
         stringStackArray.push("data1");
         stringStackArray.push("data2");
 
@@ -37,7 +37,7 @@ class StackArrayImplTest {
 
     @Test
     void performPop_whenStackIsEmpty_theShouldThrowException() {
-        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>(10);
+        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>();
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, stringStackArray::pop);
 
