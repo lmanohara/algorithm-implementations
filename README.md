@@ -8,7 +8,6 @@ This project includes the implementation of most common algorithms and data stra
 
 - Union operation: connect two objects
 - Find operation: check whther given two objects are connected
-- Path compression is effecient algorithm
   - Time complexity
     - Find `O(log(n))`
     - Union `O(log(n))`
