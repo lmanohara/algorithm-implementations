@@ -37,12 +37,25 @@ class StackLinkedListImplTest {
     }
 
     @Test
-    void performPop_whenStackIsEmpty_theShouldThrowException() {
+    void performPop_whenStackIsEmpty_thenShouldThrowException() {
         StackLinkedListImpl<String> stringStackLinkedList = new StackLinkedListImpl<>();
 
         IllegalArgumentException exception =
                 assertThrows(IllegalArgumentException.class, stringStackLinkedList::pop);
 
         assertEquals("Stack is empty", exception.getMessage());
+    }
+
+    @Test
+    void givenLinkedStack_whenIterateThroughItems_thenShouldReturnEachItem() {
+        StackLinkedListImpl<String> stringStackLinkedList = new StackLinkedListImpl<>();
+        stringStackLinkedList.push("data1");
+        stringStackLinkedList.push("data2");
+        stringStackLinkedList.push("data4");
+
+        for (String item :
+                stringStackLinkedList) {
+            assertNotNull(item);
+        }
     }
 }
