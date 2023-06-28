@@ -4,11 +4,11 @@ import com.shperev.algorithm.services.Stack;
 
 public class StackArrayImpl<T> implements Stack<T> {
     private static final int INITIAL_STACK_SIZE = 1;
-    private Object[] stack;
+    private T[] stack;
     private int N = 0;
 
     StackArrayImpl() {
-        this.stack = new Object[INITIAL_STACK_SIZE];
+        this.stack = (T[]) new Object[INITIAL_STACK_SIZE];
     }
 
     @Override
@@ -34,14 +34,14 @@ public class StackArrayImpl<T> implements Stack<T> {
         } else if (N > 0 && N == stack.length / 4) {
             resize(stack.length / 2);
         }
-        Object object = stack[--N];
+        T item = stack[--N];
         stack[N] = null;
 
-        return (T) object;
+        return item;
     }
 
     private void resize(int size) {
-        Object[] copyOfStack = new Object[size];
+        T[] copyOfStack = (T[]) new Object[size];
         for (int i = 0; i < N; i++) {
             copyOfStack[i] = stack[i];
         }
