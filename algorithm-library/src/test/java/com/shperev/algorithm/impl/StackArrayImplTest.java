@@ -43,4 +43,17 @@ class StackArrayImplTest {
         assertEquals("Stack is empty", exception.getMessage());
     }
 
+    @Test
+    void givenStack_whenIterateThrough_thenShouldReturnEachItem() {
+        StackArrayImpl<String> stringStackArray = new StackArrayImpl<>();
+
+        stringStackArray.push("data1");
+        stringStackArray.push("data2");
+        stringStackArray.push("data3");
+
+        for (String item :
+                stringStackArray) {
+            assertNotNull(item);
+        }
+    }
 }

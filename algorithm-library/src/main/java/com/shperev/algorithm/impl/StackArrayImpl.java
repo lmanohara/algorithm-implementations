@@ -2,7 +2,9 @@ package com.shperev.algorithm.impl;
 
 import com.shperev.algorithm.services.Stack;
 
-public class StackArrayImpl<T> implements Stack<T> {
+import java.util.Iterator;
+
+public class StackArrayImpl<T> implements Stack<T>, Iterable<T> {
     private static final int INITIAL_STACK_SIZE = 1;
     private T[] stack;
     private int N = 0;
@@ -47,5 +49,30 @@ public class StackArrayImpl<T> implements Stack<T> {
         }
 
         this.stack = copyOfStack;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ListIterator();
+    }
+
+    private class ListIterator implements Iterator<T> {
+        private int I = N;
+
+        @Override
+        public boolean hasNext() {
+            return I > 0;
+        }
+
+        @Override
+        public T next() {
+            // iterate the array backwards
+            return stack[--I];
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException("Remove method is invalid");
+        }
     }
 }
