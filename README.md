@@ -32,10 +32,10 @@ This project includes the implementation of most common algorithms and data stra
 
 - Compare the current element in sorted part of the array.
 - If current element grater than the last element in sorted array, continue to the iteration.
-- If current element less than the last element in sorted array, insert the value in correct position. 
+- If current element less than the last element in sorted array, insert the value in correct position.
 - Repeat until complete list is sorted.
-  - Time complexity
-    - `O(n^2)`
+    - Time complexity
+        - `O(n^2)`
 
 ## Acknowledgements
 
