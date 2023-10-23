@@ -16,6 +16,8 @@ public class MergeSortImpl extends AbstractSort {
         int mid = lo + ((hi - lo) / 2);
         sort(a, aux, lo, mid);
         sort(a, aux, mid + 1, hi);
+        // if array already sorted
+        if(!less(a[mid + 1], a[mid])) return;
         merge(a, aux, lo, mid, hi);
     }
 
