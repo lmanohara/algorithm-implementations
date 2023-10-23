@@ -10,7 +10,7 @@ public abstract class AbstractSort {
      *
      * @param a array to sort
      */
-    protected abstract void sort(Comparable[] a);
+    public abstract void sort(Comparable[] a);
 
     /**
      * Compare v < w

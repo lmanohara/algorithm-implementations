@@ -1,5 +1,6 @@
-package com.shperev.algorithm.impl;
+package com.shperev.algorithm.impl.sort;
 
+import com.shperev.algorithm.impl.sort.MergeSortImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

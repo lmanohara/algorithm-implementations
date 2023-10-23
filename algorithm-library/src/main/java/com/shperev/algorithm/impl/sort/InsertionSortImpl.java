@@ -1,4 +1,4 @@
-package com.shperev.algorithm.impl;
+package com.shperev.algorithm.impl.sort;
 
 import com.shperev.algorithm.services.AbstractSort;
 
@@ -12,7 +12,7 @@ import com.shperev.algorithm.services.AbstractSort;
  */
 public class InsertionSortImpl extends AbstractSort {
     @Override
-    protected void sort(Comparable[] a) {
+    public void sort(Comparable[] a) {
 
         int N = a.length;
 

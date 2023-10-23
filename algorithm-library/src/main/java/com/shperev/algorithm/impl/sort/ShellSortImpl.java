@@ -1,11 +1,11 @@
-package com.shperev.algorithm.impl;
+package com.shperev.algorithm.impl.sort;
 
 import com.shperev.algorithm.services.AbstractSort;
 
 public class ShellSortImpl extends AbstractSort {
 
     @Override
-    protected void sort(Comparable[] a) {
+    public void sort(Comparable[] a) {
 
         int N = a.length;
         // compute the h

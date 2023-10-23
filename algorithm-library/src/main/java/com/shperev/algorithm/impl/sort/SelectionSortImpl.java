@@ -1,4 +1,4 @@
-package com.shperev.algorithm.impl;
+package com.shperev.algorithm.impl.sort;
 
 import com.shperev.algorithm.services.AbstractSort;
 

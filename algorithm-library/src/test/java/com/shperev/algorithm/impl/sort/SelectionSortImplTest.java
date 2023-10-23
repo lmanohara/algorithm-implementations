@@ -1,5 +1,6 @@
-package com.shperev.algorithm.impl;
+package com.shperev.algorithm.impl.sort;
 
+import com.shperev.algorithm.impl.sort.SelectionSortImpl;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -9,9 +10,9 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-class InsertionSortImplTest {
+class SelectionSortImplTest {
 
-    InsertionSortImpl insertionSort = new InsertionSortImpl();
+    SelectionSortImpl selectionSort = new SelectionSortImpl();
 
     public static Stream<Arguments> provideIntArrays() {
         return Stream.of(arguments(new Integer[]{10, 4, 1}, new Integer[]{1, 4, 10}),
@@ -29,7 +30,7 @@ class InsertionSortImplTest {
     void givenIntArray_whenArraySorted_thenShouldSortedOriginalArray(Comparable[] actualArray,
                                                                      Comparable[] expectedSortedArray) {
 
-        insertionSort.sort(actualArray);
+        selectionSort.sort(actualArray);
 
         assertArrayEquals(expectedSortedArray, actualArray);
     }
@@ -39,7 +40,7 @@ class InsertionSortImplTest {
     void givenStringArray_whenArraySorted_thenShouldSortedOriginalArray(Comparable[] actualArray,
                                                                         Comparable[] expectedSortedArray) {
 
-        insertionSort.sort(actualArray);
+        selectionSort.sort(actualArray);
 
         assertArrayEquals(expectedSortedArray, actualArray);
     }
