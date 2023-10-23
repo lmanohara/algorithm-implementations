@@ -37,6 +37,13 @@ This project includes the implementation of most common algorithms and data stra
     - Time complexity
         - `O(n^2)`
 
+### Merge sort
+
+- Divide array into two half.
+- Recursively sort the left half and right half.
+- The merge function help to merge the original array into auxiliary array.
+    - Time complexity
+      - `O(log(n))`
 ## Acknowledgements
 
 - [Coursera Algorithms, Part 1](https://www.coursera.org/learn/algorithms-part1)
